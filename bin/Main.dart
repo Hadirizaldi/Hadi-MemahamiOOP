@@ -1,12 +1,24 @@
 import 'dart:io';
+import 'PersegiPanjang.dart';
 
 main(List<String> arguments) {
-  double panjang1, panjang2, lebar1, lebar2;
+  // identifier
+  PersegiPanjang kotak1, kotak2 ;
+  double luasKotak1;
+  kotak1 = new PersegiPanjang();
+  kotak1.panjang =2;
+  kotak1.lebar = 3;
 
-  panjang1 = double.tryParse(stdin.readLineSync());
-  lebar1 = double.tryParse(stdin.readLineSync());
-  panjang2 = double.tryParse(stdin.readLineSync());
-  lebar2 = double.tryParse(stdin.readLineSync());
+  kotak2 =  PersegiPanjang();
+  stdout.write ("Masukkan panjang kotak 2 = ");
+  kotak2.panjang = double.tryParse(stdin.readLineSync());
+  stdout.write ("Masukkan lebar kotak 2 = ");
+  kotak2.lebar = double.tryParse(stdin.readLineSync());
 
-  print(panjang1 * lebar1 + panjang2 * lebar2);
+  luasKotak1 = kotak1.hitungLuas();
+
+  print(luasKotak1 + kotak2.hitungLuas());
+
+
+
 }
