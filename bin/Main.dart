@@ -6,8 +6,8 @@ main(List<String> arguments) {
   PersegiPanjang kotak1, kotak2 ;
   double luasKotak1;
   kotak1 = new PersegiPanjang();
-  kotak1.setPanjang(-2);
-  kotak1.lebar = 3;
+  kotak1.setPanjang(2);
+  kotak1.lebar = -3;
 
   kotak2 =  PersegiPanjang();
   stdout.write ("Masukkan panjang kotak 2 = ");
@@ -19,6 +19,7 @@ main(List<String> arguments) {
 
   print(luasKotak1 + kotak2.hitungLuas());
   print('panjang kotak1= '+kotak1.getPanjang().toString());
+  print("lebar kotak 1 = "+kotak1.lebar.toString());
 
 
 
